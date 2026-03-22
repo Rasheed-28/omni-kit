@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/Home/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omni-Kit</title>
   </head>
@@ -17,12 +17,11 @@
         </div>
         <div id="right-pane">
           <a href="/Home/index.html">Home</a>
-          <a href="/Calulator/calculator.html">Calculator</a>
+          <a href="/Calculator/calculator.html">Calculator</a>
           <a href="/Converter/converter.html">Converter</a>
           <a href="/Clock/clock.html">Clock</a>
         </div>
       </div>
-
       <!-- Intro Content Box -->
       <div id="content-container">
         <div id="intro-box-container">
@@ -33,11 +32,19 @@
             everyday tasks faster, easier, and more convenient.
           </p>
           <div class="intro-buttons">
-            <button id="try-now" href="#" class="btn-primary" onclick="navigate_to_try_now()">Try Now</button>
-            <button class="btn-secondary" onclick="navigate_to_try_now()">Learn More</button>
+            <button
+              id="try-now"
+              href="#"
+              class="btn-primary"
+              onclick="navigate_to_try_now()"
+            >
+              Try Now
+            </button>
+            <button class="btn-secondary" onclick="navigate_to_try_now()">
+              Learn More
+            </button>
           </div>
         </div>
-
         <!-- Testimonials Section -->
         <div id="testimonials-container">
           <h2>What Users Say</h2>
@@ -81,7 +88,13 @@
         <div id="register-container">
           <h2>Register Yourself</h2>
           <form id="register-form">
-            <input type="text" placeholder="Full Name" name="name" required />
+            <input
+              id="your-name"
+              type="text"
+              placeholder="Full Name"
+              name="name"
+              required
+            />
             <input
               type="email"
               placeholder="Email Address"
@@ -94,11 +107,18 @@
               name="password"
               required
             />
-            <button type="submit" class="btn-primary">Register</button>
+            <button
+              onclick="registration_form_credentials()"
+              type="submit"
+              class="btn-primary"
+            >
+              Register
+            </button>
           </form>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
-  <script src="./script.js"></script>
+  
 </html>

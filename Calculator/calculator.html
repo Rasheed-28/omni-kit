@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Omni-Kit Calculator</title>
+
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container">
+      <div id="left-pane">
+        <div id="main-heading-container">
+          <a href="/Home/index.html" id="main-heading-link">Omni-Kit</a>
+        </div>
+      </div>
+      <div id="right-pane">
+        <a href="/Home/index.html">Home</a>
+        <a href="/Calculator/calculator.html">Calculator</a>
+        <a href="/Converter/converter.html">Converter</a>
+        <a href="/Clock/clock.html">Clock</a>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content-container">
+      <div id="calculator-container">
+        <!-- Screen -->
+        <div id="screen-container">
+          <input type="text" id="screen" placeholder="0" readonly>
+        </div>
+
+        <!-- Buttons -->
+        <div id="buttons-container">
+          <div class="input-btn-container">
+            <button class="input-btn" onclick="press_number('7')">7</button>
+            <button class="input-btn" onclick="press_number('8')">8</button>
+            <button class="input-btn" onclick="press_number('9')">9</button>
+            <button class="input-btn operator-btn">DEL</button>
+          </div>
+          <div class="input-btn-container">
+            <button class="input-btn" onclick="press_number('4')">4</button>
+            <button class="input-btn" onclick="press_number('5')">5</button>
+            <button class="input-btn" onclick="press_number('6')">6</button>
+            <button class="input-btn operator-btn">+</button>
+          </div>
+          <div class="input-btn-container">
+            <button class="input-btn" onclick="press_number('1')">1</button>
+            <button class="input-btn" onclick="press_number('2')">2</button>
+            <button class="input-btn" onclick="press_number('3')">3</button>
+            <button class="input-btn operator-btn">-</button>
+          </div>
+          <div class="input-btn-container">
+            <button class="input-btn" onclick="press_number('0')">0</button>
+            <button class="input-btn" onclick="press_number('00')">00</button>
+            <button class="input-btn">.</button>
+            <button class="input-btn operator-btn">×</button>
+          </div>
+          <div class="input-btn-container">
+            <button class="input-btn operator-btn">AC</button> 
+            <button class="input-btn operator-btn">=</button> 
+            <button class="input-btn operator-btn">÷</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
