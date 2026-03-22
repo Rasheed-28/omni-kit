@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Calculator from "./pages/Calculator";
-import Layout from "./components/Layout"
+import Calculator from "./pages/Calculator/Calculator";
+import Layout from "./components/Layout";
 
 // Example pages
 function Home() {
@@ -56,7 +56,10 @@ export default function App() {
           <Route path="converter/length" element={<LengthConverter />} />
           <Route path="converter/mass" element={<MassConverter />} />
           <Route path="converter/time" element={<TimeConverter />} />
-          <Route path="converter/temperature" element={<TemperatureConverter />} />
+          <Route
+            path="converter/temperature"
+            element={<TemperatureConverter />}
+          />
           <Route path="converter/velocity" element={<VelocityConverter />} />
           {/* Add other converter routes */}
         </Route>

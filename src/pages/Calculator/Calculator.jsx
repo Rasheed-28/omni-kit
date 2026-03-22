@@ -1,38 +1,45 @@
+import './calculator.css'
+
 export default function Calculator() {
   const button_set_1 = [
     { id: 11, title: "7" },
     { id: 12, title: "8" },
     { id: 13, title: "9" },
+    { id: 14, title: "/" },
   ];
   const button_set_2 = [
     { id: 21, title: "4" },
     { id: 22, title: "5" },
     { id: 23, title: "6" },
+    { id: 24, title: "*" },
   ];
   const button_set_3 = [
     { id: 31, title: "1" },
     { id: 32, title: "2" },
     { id: 33, title: "3" },
+    { id: 34, title: "-" },
   ];
   const button_set_4 = [
     { id: 41, title: "0" },
     { id: 42, title: "00" },
     { id: 43, title: "." },
+    { id: 44, title: "+" },
   ];
+ 
   const button_set_5 = [
-    { id: 51, title: "+" },
-    { id: 52, title: "-" },
-    { id: 53, title: "*" },
-    { id: 54, title: "/" },
-  ];
-  const button_set_6 = [
-    { id: 61, title: "=" },
-    { id: 62, title: "DEL" },
-    { id: 63, title: "AC" },
+    { id: 51, title: "=" },
+    { id: 52, title: "DEL" },
+    { id: 53, title: "AC" },
+    { id: 54, title: "MOD" },
   ];
   return (
     <div>
-        {/* Button Set 1 */}
+      <div className="flex flex-row">
+        <div>
+          <input type="text" placeholder='0' className='text-right w-xl' />
+        </div>
+      </div>
+      {/* Button Set 1 */}
       <div className="flex gap-10">
         {button_set_1.map((button1) => (
           <button
@@ -80,18 +87,17 @@ export default function Calculator() {
         ))}
       </div>
 
-        {/* Button Set 6 (Intentionally Set) */}
+      {/* Button Set 5 */}
       <div className="flex gap-10">
-        {button_set_6.map((button6) => (
+        {button_set_5.map((button5) => (
           <button
-            key={button6.id}
+            key={button5.id}
             className="bg-gray-200 p-3 rounded hover:bg-gray-300 w-40 mt-10"
           >
-            {button6.title}
+            {button5.title}
           </button>
         ))}
       </div>
-      
     </div>
   );
 }
